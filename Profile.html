@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("https://images.unsplash.com/photo-1503264116251-35a269479413") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Overlay */
+.overlay {
+  background: rgba(0,0,0,0.6);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Profile Card */
+.profile {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.next { right: 10px; }
+.prev { left: 10px; }
+
+/* About */
+.about {
+  margin-top: 30px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+  <div class="profile">
+
+    <!-- Profile Picture -->
+    <img src="unnamed.jpg">
+
+    <h1>ROMEL C. CASIMIRO</h1>
+    <h2>WELCOME TO MY WEBPAGE PORTAL</h2>
+   
+    <section>
+  <html>
+<head>
+<title>Home Button</title>
+
+<style>
+.home-btn {
+    background-color: #c73666;   /* button color */
+    color: white;               /* text color */
+    padding: 12px 25px;
+    text-decoration: none;      /* tanggal underline */
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.home-btn:hover {
+    background-color: #2980b9;  /* hover color */
+}
+</style>
+
+</head>
+<body>
+
+<center><a href="index.html" class="home-btn">RESUME</a> <a href="mycredentials.html" class="home-btn">Credentials</a></center>
+
+
+</head>
+
+
+</section>
+
+    <!-- Slider -->
+    <div class="slider">
+
+      <div class="slide">
+        <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/597392999_122149890350928843_3173184769934229376_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zhwBUgzz0I4Q7kNvwGgXaeS&_nc_oc=AdmZQfQ1GDN7WMQ0mUeGa-VjM6wI6BEdKlfPzynA8-EgthxFFQVoS-A8940iwDB14Ck&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=IE7BWhqaW_7hO35JkPbzLg&oh=00_AfvP7_Kmy9_RBZe1J2TrqDhHBP8uYwObLJiOpghrsrsxlw&oe=6988A295">
+      </div>
+
+      <div class="slide">
+        <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/532934554_798938299144452_5462153084144809041_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1Q0TB3cmDssQ7kNvwEyyle8&_nc_oc=Adl24Ylp3nZOckWSYYGzcPbemFOYt2OJwE-30abE8c2ltubJvc1IxllhMbvXnsUp2IQ&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=nBG9rq0NNk4tbATGpBHxJA&oh=00_AftP03DR5lMB4SS18_Wb80mFA0j4HfDq30Gcy6OLjpQBwA&oe=6988921D">
+      </div>
+
+      <div class="slide">
+        <img src="https://picsum.photos/600/350?3">
+      </div>
+
+      <a class="prev" onclick="changeSlide(-1)">❮</a>
+      <a class="next" onclick="changeSlide(1)">❯</a>
+
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I am a IT Support Specialist. I love my job since 2007 
+      </p>
+
+      <h3>Skills</h3>
+      <p>IT SUPPORT • NETWORK  • HTML</p>
+
+      <h3>Contact</h3>
+      <p>Email: romecasimiro7@gmail.com</p>
+      <p>Mobile Number: 09279468845</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+
+  if (n >= slides.length) slideIndex = 0;
+  if (n < 0) slideIndex = slides.length - 1;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
+}
+</script>
+
+</body>
+</html>
